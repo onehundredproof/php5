@@ -9,3 +9,5 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv-keys E5267A6C; \
 RUN echo "<?php phpinfo(); ?>" > /srv/www/phpinfo.php
 
 ADD ./default /etc/nginx/sites-available/default
+
+RUN service nginx start
